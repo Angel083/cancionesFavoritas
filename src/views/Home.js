@@ -1,8 +1,13 @@
 import React from 'react';
+import { useEffect} from 'react';
 import Buttons from '../components/Buttons';
 import { Card } from '../components/Card';
 
 function Home() {
+  useEffect(() => {
+    
+  });
+  
   return (
     <div className="">
       <header className="header">
@@ -12,7 +17,7 @@ function Home() {
         <Buttons></Buttons>
         <div className='card__container'>
           <Card titulo="TITULO largo que tendra que funcionar" grupo="grupo genail" año="2011" genero="pop rock"></Card>
-          <Card titulo="TITULO mas corto que antes 2" grupo="grupo" año="año" genero="genero"></Card>
+          <Card titulo="TITULO mas corto 2" grupo="grupo" año="año" genero="genero"></Card>
           <Card titulo="TITULO" grupo="grupo" año="año" genero="genero"></Card>
           <Card titulo="TITULO" grupo="grupo" año="año" genero="genero"></Card>
           <Card titulo="TITULO" grupo="grupo" año="año" genero="genero"></Card>
