@@ -1,0 +1,13 @@
+/* First mobil*/
+/* Reinicio los pading y margin junto al box-sizing para evitar problemas*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Reinicio los estilos de html para que sea más conodo manejar la medida rem*/
+html{ 
+  font-size: 62.5%;
+  background-color: var(--colorGris1);
+  scroll-behavior: smooth;
+}
