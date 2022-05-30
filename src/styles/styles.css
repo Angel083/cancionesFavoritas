@@ -1,5 +1,19 @@
 /* First mobil*/
 /* Reinicio los pading y margin junto al box-sizing para evitar problemas*/
+:root{
+  --color-azul1 :hsl(215, 78%, 83%) ;
+  --color-azul2 :hsl(215, 71%, 69%) ;
+  --color-azul3 :hsl(215, 67%, 57%) ;
+  --color-azul4 :hsl(215, 79%, 31%) ;
+  --color-azul5 :hsl(215, 97%, 13%) ;
+  --color-gris0 :hsl(215, 5%, 95%) ;
+  --color-gris1 :hsl(215, 5%, 90%) ;
+  --color-gris2 :hsl(215, 5%, 70%) ;
+  --color-gris3 :hsl(215, 5%, 50%) ;
+  --color-gris4 :hsl(215, 5%, 30%) ;
+  --color-gris5 :hsl(215, 5%, 10%) ;
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -8,6 +22,188 @@
 /* Reinicio los estilos de html para que sea más conodo manejar la medida rem*/
 html{ 
   font-size: 62.5%;
-  background-color: var(--colorGris1);
+  background-color: var(--color-gris1);
   scroll-behavior: smooth;
+}
+
+/* Reinicio de algunos estilos generales */
+Link, a {
+  text-decoration-line: none;
+  text-decoration: none;
+}
+/* First mobile*/
+
+h1 {
+  font-size: 3.2rem;
+  color: var(--color-azul5);
+}
+h2{
+  font-size: 2.4rem;
+  color: var(--color-azul5);
+}
+p{
+  font-size: 1.6rem;
+  color: var(--color-gris4)
+}
+body {
+  padding: 2rem;
+}
+.header{
+  text-align: center;
+}
+
+
+.buttons__container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.botton{
+  border-radius: 1rem;
+  border-width: 0;
+  transition: .1s ease-in-out;
+  background-color: var(--color-azul3);
+  cursor: pointer;
+  width: 10rem;
+  padding: 1rem .5rem;
+  font-size: 2rem;
+  color: var(--color-gris0);
+}
+.botton:hover{
+  transform: scale(1.1);
+}
+.button__add{
+  width: 10rem;
+  padding: 1rem .5rem;
+  font-size: 2rem;
+  color: var(--color-gris0);
+  background-color: var(--color-azul3);
+  align-items: center;
+}
+.button__add:hover{
+  background-color: var(--color-gris0);
+  border: solid var(--color-azul3) .1rem;
+  color: var(--color-azul3);
+}
+.button__add:hover p{
+  color: var(--color-azul3);
+}
+.button__add__text{
+  display: none;
+}
+.button__add__text p{
+  font-size: 2rem;
+  color: var(--color-gris0);
+  display: inline;
+}
+
+.button__row{
+  border-radius: 1rem 0 0 1rem;
+  width: 5rem;
+  padding: 1rem .5rem;
+  font-size: 2rem;
+  color: var(--color-gris0);
+  background-color: var(--color-azul3);
+}
+.active{
+  background-color: var(--color-azul5);
+}
+
+.button__grid{
+  border-radius: 0rem 1rem 1rem 0rem;
+  width: 5rem;
+  padding: 1rem .5rem;
+  font-size: 2rem;
+  color: var(--color-gris0);
+  background-color: var(--color-azul3);
+}
+.active{
+  background-color: var(--color-azul5);
+}
+/*----------> Card <---------------*/
+.card__container {
+  width: 100%;
+  padding: 2rem 1rem 1rem 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--color-azul1);
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+  box-shadow: .5rem .4rem 1rem 0rem var(--color-gris3);
+  display: block;
+  transition: all .2s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.02);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.gridCard {
+  display: inline-block;
+  margin: 1rem;
+  width: auto;
+}
+.gridCard:hover {
+  transform: scale(1.05);
+}
+
+.card__info{
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+}
+.card__options{
+  width: 1%;
+  top: 0;
+  color: var(--color-gris5);
+  font-size: 2rem;
+}
+.card__options button{
+  background-color: var(--color-azul1);
+  border-style: none;
+  border-width: none;
+}
+
+/* -------------------------> Versión web*/
+
+@media screen and (min-width: 768px) {
+
+  h1 {
+    font-size: 3.6rem;
+    color: var(--color-azul5);
+  }
+  h2{
+    font-size: 3.2rem;
+    color: var(--color-azul5);
+  }
+  p{
+    font-size: 2.4rem;
+    color: var(--color-gris4)
+  }
+  body {
+    padding: 4rem;
+  }
+  .button__add{
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+  }
+  .button__add__text{
+    display: inline;
+    margin-left: 2rem;
+  }
+
+  /* --------------> Card <----------------*/
 }

@@ -1,12 +1,16 @@
 import React from 'react';
+import "./styles/normalize.css"
+import "./styles/styles.css"
+import { Routes, Route } from "react-router-dom";
+import Home from './views/Home';
+import AddSong from './views/AddSong';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Gola mundo</h1>
-      </header>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/AddSong" element={<AddSong/>}></Route>
+      </Routes>
   );
 }
 
