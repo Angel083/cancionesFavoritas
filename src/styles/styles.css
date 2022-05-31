@@ -31,6 +31,22 @@ Link, a {
   text-decoration-line: none;
   text-decoration: none;
 }
+
+label{
+  display: block;
+  font-size: 2.5rem;
+  margin: .5rem;
+}
+input{
+  display: block;
+  margin: .5rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-size: 2rem;
+}
+span{
+  font-size: 1.6rem;
+}
 /* First mobile*/
 
 h1 {
@@ -47,6 +63,9 @@ p{
 }
 body {
   padding: 2rem;
+}
+button {
+  border-width: 0;
 }
 .header{
   text-align: center;
@@ -175,7 +194,52 @@ body {
   border-style: none;
   border-width: none;
 }
+/*---------> Formulario <-------*/
 
+.formulario{
+  margin-top: 2rem;
+  padding: 4rem 1.5rem;
+  justify-content: center;
+  background-color: var(--color-gris0);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  align-self: center;
+  align-items: auto;
+  justify-content: auto;
+}
+.formulario div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formulario div input{
+  width: 70%;
+}
+.text-red{
+  color: red
+}
+.border-red{
+  border-color: red
+}
+.border-gray{
+  border-color: var(--color-gris3)
+}
+.formulario__boton{
+  margin-top: 1rem;
+  background-color: var(--color-azul4);
+  padding: 2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  color: var(--color-gris0);
+  border-width: 0;
+}
+.formulario__boton:hover{
+  transform: scale(1.1) ;
+  cursor: pointer;
+}
 /* -------------------------> Versión web*/
 
 @media screen and (min-width: 768px) {
@@ -204,6 +268,10 @@ body {
     display: inline;
     margin-left: 2rem;
   }
-
-  /* --------------> Card <----------------*/
+  .formulario div input{
+    width: 50%;
+  }
+  .formulario div input{
+    width: 50%;
+  }
 }

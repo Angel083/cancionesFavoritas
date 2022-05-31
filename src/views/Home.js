@@ -5,9 +5,8 @@ import { Card } from '../components/Card';
 function Home() {
   const [canciones, setCanciones] = useState([]);
   useEffect(() => {
-      Axios({
-        url: "http://localhost:3001/api/v1/songs"
-      })
+      Axios.get("http://localhost:3001/api/v1/songs"
+      )
         .then((response) => {
           setCanciones(response.data)
         })
@@ -21,8 +20,10 @@ function Home() {
       <main>
         <Buttons></Buttons>
         <div className='card__container'>
-          {canciones.map( ({titulo, grupo, anio, genero}) => (
-          <Card 
+          {canciones.map( ({titulo, grupo, anio, genero, id}) => (
+          <Card
+            key={id}
+            id={id}
             titulo={titulo} 
             grupo={grupo} 
             anio={anio}
