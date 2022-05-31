@@ -240,6 +240,32 @@ button {
   transform: scale(1.1) ;
   cursor: pointer;
 }
+
+.item__contenedor{
+  background-color: var(--color-gris0);
+  width: 90%;
+  margin: 2rem;
+  padding: 2rem 4rem;
+  gap: 1rem;
+}
+.item__contenedor h2{
+  margin-bottom: 2rem;
+}
+.item__contenedor p{
+  margin: 1rem 2rem ;
+}
+.item__delete{
+  margin-top: 3rem;
+  font-size: 2rem;
+  padding: 1.5rem;
+  background-color: red;
+  color: var(--color-gris0);
+  border-radius: 1rem;
+}
+
+.item__delete:hover{
+  cursor: pointer;
+}
 /* -------------------------> Versión web*/
 
 @media screen and (min-width: 768px) {
