@@ -2,13 +2,20 @@ import Axios from "axios";
 import React, { useState, useEffect } from 'react';
 import Buttons from '../components/Buttons';
 import { Card } from '../components/Card';
+import { Link } from 'react-router-dom';
+import { faPlus} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import url from "./../global/global"
+
 function Home() {
   const [canciones, setCanciones] = useState([]);
   useEffect(() => {
-      Axios.get("http://localhost:3001/api/v1/songs"
+      Axios.get(`${url}/songs`
       )
         .then((response) => {
           setCanciones(response.data)
+          console.log(response.data);
+          
         })
   }, [setCanciones])
   
@@ -18,9 +25,16 @@ function Home() {
         <h1>Canciones favoritas</h1>
       </header>
       <main>
-        <Buttons></Buttons>
+      <Link to="/AddSong">
+        <button className='botton button__add'>
+          <FontAwesomeIcon icon={faPlus} />
+          <div className="button__add__text">
+          <p>Agregar</p>
+          </div>
+        </button>
+      </Link>
         <div className='card__container'>
-          {canciones.map( ({titulo, grupo, anio, genero, id}) => (
+          { canciones.map( ({titulo, grupo, anio, genero, id}) => (
           <Card
             key={id}
             id={id}

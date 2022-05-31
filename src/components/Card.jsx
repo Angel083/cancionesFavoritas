@@ -1,11 +1,11 @@
 import React from "react";
-import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 export const Card = (body) => {
   const urlEdit = `/EditSong/${body.id}`
-  return <Link to={urlEdit} className="card" >
+  return <Link to={urlEdit} className="card " id="card">
     <div className="card__content">
       <div className="card__info">
         <h2>{body.titulo}</h2>
@@ -14,9 +14,9 @@ export const Card = (body) => {
         <p>{body.genero}</p>
       </div>
       <div className="card__options">
-        <button>
+        {/* <button>
           <FontAwesomeIcon icon={faEllipsisV}/>
-        </button>
+        </button> */}
       </div>
     </div>
   </Link>;

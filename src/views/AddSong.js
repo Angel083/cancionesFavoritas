@@ -1,11 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import  Axios  from './../../node_modules/axios/index';
 import { useNavigate } from "react-router-dom";
+import url from "./../global/global"
 
 
 function AddSong() {
@@ -19,7 +20,7 @@ function AddSong() {
     },
     onSubmit: (values) => {
       
-      Axios.post("http://localhost:3001/api/v1/songs/AddSong", values)
+      Axios.post(`${url}/songs/AddSong`, values)
         .then(() => {navigate("/")})
     },
     validationSchema: Yup.object({

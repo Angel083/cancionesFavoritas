@@ -15,10 +15,10 @@ const Buttons = () => {
         </button>
       </Link>
       <div>
-        <button className='botton button__row active' id='row'>
+        <button className='botton button__row distribution active' id='row'>
           <FontAwesomeIcon icon={faGripLines} />
         </button>
-        <button className='botton button__grid' id='grid'>
+        <button className='botton button__grid distribution' id='grid'>
           <FontAwesomeIcon icon={faGrip} />
         </button>
       </div>

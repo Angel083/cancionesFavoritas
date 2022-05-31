@@ -3,20 +3,23 @@ import { useParams, Link, useNavigate} from 'react-router-dom';
 import Axios from './../../node_modules/axios/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import url from "./../global/global"
+
 
 const EditSong = () => {
   const { id } = useParams();
   const [item, setItem] = useState([]);
   let navigate = useNavigate();
+  
 
   useEffect(() => {
-    Axios.get(`http://localhost:3001/api/v1/songs/${id}`)
+    Axios.get(`${url}/songs/${id}`)
     .then(({data}) => {setItem(data); console.log(data);
     })
     // console.log(item)
   }, [setItem, id]);
   function handleChange () {
-    Axios.delete(`http://localhost:3001/api/v1/songs/${id}`)
+    Axios.delete(`${url}/songs/${id}`)
     navigate("/")
   }
   
